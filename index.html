@@ -1,1 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MRD Corporation</title>
+<meta name="description" content="MRD Corporation: call, email, working hours and 200+ homes in Rawalpindi.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0B12;--tx:#F5F6FA;--mu:#AEB2C7;--glass:rgba(255,255,255,.07);--bd:rgba(255,255,255,.2);--hl:rgba(255,255,255,.14);--sh:rgba(0,0,0,.35);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#F1EFFA;--tx:#15162B;--mu:#4A4E68;--glass:rgba(255,255,255,.5);--bd:rgba(255,255,255,.9);--hl:rgba(255,255,255,.8);--sh:rgba(60,50,120,.18)}}
+:root[data-theme="dark"]{--bg:#0A0B12;--tx:#F5F6FA;--mu:#AEB2C7;--glass:rgba(255,255,255,.07);--bd:rgba(255,255,255,.2);--hl:rgba(255,255,255,.14);--sh:rgba(0,0,0,.35)}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+h1,h2{font-family:Unbounded,Manrope,sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:0 0 18px}
+.sl{position:relative;overflow:hidden;min-height:100svh;display:flex;align-items:center;padding:110px 6vw 70px;box-sizing:border-box;scroll-snap-align:start}
+.sl::before,.sl::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:fl 14s ease-in-out infinite alternate}
+.sl::before{width:46vmax;height:46vmax;left:-14vmax;top:-12vmax;background:var(--c1)}
+.sl::after{width:40vmax;height:40vmax;right:-12vmax;bottom:-12vmax;background:var(--c2);animation-delay:-6s}
+@keyframes fl{to{transform:translate(5vmax,4vmax) scale(1.15)}}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.one{grid-template-columns:1fr}
+.hero{--c1:#A78BFA;--c2:#38D9FF}.ph{--c1:#34E0B1;--c2:#38BDF8}.em{--c1:#FF7AAE;--c2:#FFB84D}.tm{--c1:#A78BFA;--c2:#F472B6}.hm{--c1:#FFA04D;--c2:#FB7185}.tl{--c1:#22D3EE;--c2:#818CF8}
+.ac{background:linear-gradient(120deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eb{font-size:13px;font-weight:800;letter-spacing:.18em;margin-bottom:14px;display:block}
+p.lead{color:var(--mu);font-size:18px;margin:0 0 22px;max-width:520px}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%);border:1px solid var(--bd);border-radius:28px;box-shadow:0 20px 50px var(--sh),inset 0 1px 0 var(--hl);padding:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 26px;border-radius:16px;border:0;font:800 15px Manrope,sans-serif;cursor:pointer;color:#0A0B12;background:linear-gradient(135deg,var(--c1),var(--c2));transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--sh)}
+.btn.g{background:var(--glass);color:var(--tx);border:1px solid var(--bd);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.bar{display:flex;gap:12px;flex-wrap:wrap}
+.big{font-family:Unbounded,Manrope,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.1;word-break:break-word}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:99px;font-size:14px;font-weight:600;background:var(--glass);border:1px solid var(--bd);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.dot{width:10px;height:10px;border-radius:50%;background:#34E0B1;box-shadow:0 0 0 4px rgba(52,224,177,.25)}.off .dot{background:#FF7A7A;box-shadow:0 0 0 4px rgba(255,122,122,.25)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 22px;border-radius:18px;font-weight:600;flex-wrap:wrap}
+.row+.row{margin-top:6px}.row b{font-family:Unbounded,Manrope,sans-serif;font-size:17px}.row span{color:var(--mu)}
+.row.today{background:var(--hl);box-shadow:inset 0 0 0 1px var(--bd)}
+.cl{color:#E5484D!important;font-weight:800}
+.city{border-radius:28px;overflow:hidden;border:1px solid var(--bd);box-shadow:0 20px 50px var(--sh);background:linear-gradient(180deg,#3A1F6B,#C2458F 55%,#FF9A5A);margin-top:30px}
+.city svg{display:block;width:100%;height:auto}
+.nv{position:fixed;z-index:20;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(960px,calc(100% - 28px));box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 22px;border-radius:99px}
+.nv .lg{font-family:Unbounded,sans-serif;font-weight:800}
+.nv nav{display:flex;gap:4px}.nv nav a{padding:8px 14px;border-radius:99px;font-size:14px;font-weight:600;color:var(--mu)}
+.nv nav a.on,.nv nav a:hover{background:var(--hl);color:var(--tx)}
+.nv .btn{min-height:40px;padding:8px 20px}
+#pg{position:fixed;z-index:30;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#A78BFA,#FF7AAE,#FFB84D)}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.av{width:60px;height:60px;border-radius:20px;display:flex;align-items:center;justify-content:center;font:800 24px Unbounded,sans-serif;color:#0A0B12;background:linear-gradient(135deg,var(--c1),var(--c2));margin-bottom:16px}
+.wm{font-family:Unbounded,sans-serif;font-weight:800;font-size:clamp(90px,22vw,260px);line-height:1;letter-spacing:-.04em;text-align:center;margin:44px 0 10px;background:linear-gradient(120deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.8}
+.ft{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;letter-spacing:.08em;padding:18px 26px;border-radius:99px}
+.rv{opacity:0;transform:translateX(-90px) scale(.97);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.r{transform:translateX(90px) scale(.97)}.rv.u{transform:translateY(60px) scale(.97)}
+.rv.in{opacity:1;transform:none}
+#toast{position:fixed;z-index:40;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);opacity:0;padding:12px 24px;border-radius:99px;font-weight:800;transition:.3s;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:860px){.wrap,.team{grid-template-columns:1fr}.nv nav{display:none}.sl{padding-top:100px}.glass{padding:26px;border-radius:24px}.ft{border-radius:24px}}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.sl::before,.sl::after{animation:none}html{scroll-behavior:auto}}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<div id="pg"></div>
+<header class="nv glass"><a class="lg" href="#top">MRD<span class="ac">.</span></a>
+<nav><a href="#phone">Phone</a><a href="#email">Email</a><a href="#timings">Timings</a><a href="#homes">Homes</a><a href="#team">Team</a></nav>
+<a class="btn" href="tel:+923132662426" style="--c1:#34E0B1;--c2:#38BDF8">Call now</a></header>
+
+<section class="sl hero" id="top"><div class="wrap one" style="text-align:center;justify-items:center">
+<div class="rv u"><span class="eb ac">NEXT-GENERATION COMMUNICATION</span>
+<h1 class="big" style="font-size:clamp(44px,9vw,110px)">MRD <span class="ac">CORPORATION</span></h1>
+<p class="lead" style="margin:0 auto 26px">Connecting businesses with next-generation communication systems, and helping families find the right home in Rawalpindi.</p>
+<div class="bar" style="justify-content:center"><a class="btn" href="#phone">Contact us</a><a class="btn g" href="#homes">See our homes</a></div>
+<p style="margin-top:26px"><span class="pill st"><span class="dot"></span><span class="stt">Checking hours…</span></span></p></div>
+</div></section>
+
+<section class="sl ph" id="phone"><div class="wrap">
+<div class="rv"><span class="eb ac">01 · DIRECT CALL</span><h2 style="font-size:clamp(32px,5vw,54px)">Talk to a real person, <span class="ac">right now.</span></h2>
+<p class="lead">Property visits, house enquiries and system integration. Call or message and get guidance the same day.</p>
+<span class="pill st"><span class="dot"></span><span class="stt"></span></span></div>
+<div class="glass rv r" style="--d:.15s"><span class="eb" style="color:var(--mu)">MOBILE · REPRESENTATIVE</span>
+<div class="big" style="font-size:clamp(30px,4.6vw,50px);margin-bottom:26px">0313 266 2426</div>
+<div class="bar"><a class="btn" href="tel:+923132662426">Call now</a><button class="btn g" data-copy="03132662426">Copy number</button><a class="btn g" href="https://wa.me/923132662426">WhatsApp</a></div></div>
+</div></section>
+
+<section class="sl em" id="email"><div class="wrap">
+<div class="glass rv" style="--d:.15s"><span class="eb" style="color:var(--mu)">OFFICIAL MAILBOX</span>
+<div class="big" style="font-size:clamp(22px,3.2vw,34px);margin-bottom:26px">mzgondal58@gmail.com</div>
+<div class="bar"><a class="btn" href="mailto:mzgondal58@gmail.com">Send email</a><button class="btn g" data-copy="mzgondal58@gmail.com">Copy email</button></div></div>
+<div class="rv r"><span class="eb ac">02 · EMAIL INQUIRY</span><h2 style="font-size:clamp(32px,5vw,54px)">Send details, <span class="ac">proposals</span> and documents.</h2>
+<p class="lead">For property requirements, business partnerships and formal documentation, write to us any time.</p></div>
+</div></section>
+
+<section class="sl tm" id="timings"><div class="wrap">
+<div class="rv"><span class="eb ac">03 · WORK SCHEDULE</span><h2 style="font-size:clamp(32px,5vw,54px)">Know exactly when <span class="ac">we’re available.</span></h2>
+<p class="lead">Check our weekly hours before you call or plan a visit. All times are Pakistan Standard Time.</p>
+<span class="pill st"><span class="dot"></span><span class="stt"></span></span></div>
+<div class="glass rv r" style="--d:.15s;padding:18px">
+<div class="row" data-d="1234"><b>Mon – Thu</b><span class="hrs"></span></div>
+<div class="row" data-d="5"><b>Friday</b><span class="cl">Weekly off</span></div>
+<div class="row" data-d="60"><b>Sat – Sun</b><span class="hrs"></span></div></div>
+</div></section>
+
+<section class="sl hm" id="homes"><div class="wrap one">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+<div class="rv"><span class="eb ac">04 · MRD REAL ESTATE</span><h2 style="font-size:clamp(34px,6vw,66px);margin:0">200+ homes <span class="ac">in stock.</span></h2></div>
+<div class="rv r" style="--d:.15s;max-width:380px"><p class="lead" style="font-size:16px">Single-storey, double-storey and rentals across Rawalpindi. Tell us what you need and we’ll arrange a visit.</p><a class="btn" href="https://wa.me/923132662426">Request the list</a></div></div>
+<div class="city rv u" style="--d:.2s" id="city" role="img" aria-label="Pixel illustration of a neighbourhood packed with houses"></div>
+</div></section>
+
+<section class="sl tl" id="team"><div class="wrap one">
+<div class="rv"><span class="eb ac">05 · THE TEAM</span></div>
+<div class="team">
+<div class="glass rv" style="--d:.1s"><div class="av">A</div><h2 style="font-size:26px;margin-bottom:6px">Ahmad Gondal</h2><span class="eb ac" style="margin-bottom:8px">SON &amp; DEVELOPER</span><span style="color:var(--mu)">Graphic and web app designer, and developer of this website.</span></div>
+<div class="glass rv r" style="--d:.25s"><div class="av">M</div><h2 style="font-size:26px;margin-bottom:6px">M. Zubair Qadri</h2><span class="eb ac" style="margin-bottom:8px">FATHER &amp; CO-FOUNDER</span><span style="color:var(--mu)">Real estate work in Rawalpindi (RWP). Co-founder and business partner in MRD Corporation.</span></div></div>
+<div class="wm rv u">MRD</div>
+<footer class="ft glass rv u"><div>ENGINEERED WITH ❤️ BY <b>M. AHMAD RAZA</b></div><div style="color:var(--mu)">© 2026 MRD CORP. ALL RIGHTS RESERVED.</div></footer>
+</div></section>
+<div id="toast" class="glass">Copied!</div>
+
+<script>
+// ===== EDIT HERE: opening hours (24h clock, Pakistan time) =====
+var CFG={open:10,close:19,offDay:5}; // offDay: 0=Sun ... 5=Friday
+function fmt(h){var x=h%12||12;return x+":00 "+(h<12?"AM":"PM")}
+var HRS=fmt(CFG.open)+" – "+fmt(CFG.close);
+document.querySelectorAll(".hrs").forEach(function(e){e.textContent=HRS});
+function now(){try{var p=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Karachi",weekday:"short",hour:"numeric",hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});
+return{d:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(o.weekday),h:parseInt(o.hour,10)%24}}catch(e){var n=new Date();return{d:n.getDay(),h:n.getHours()}}}
+function status(){var t=now(),open=t.d!==CFG.offDay&&t.h>=CFG.open&&t.h<CFG.close;
+document.querySelectorAll(".st").forEach(function(e){e.classList.toggle("off",!open);e.querySelector(".stt").textContent=open?"Active now · until "+fmt(CFG.close):(t.d===CFG.offDay?"Closed today (weekly off)":"Closed right now · opens "+fmt(CFG.open))});
+document.querySelectorAll(".row").forEach(function(r){r.classList.toggle("today",r.dataset.d.indexOf(t.d)>-1)})}
+status();setInterval(status,60000);
+// copy buttons
+var tt;function toast(m){var e=document.getElementById("toast");e.textContent=m;e.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){e.classList.remove("show")},1800)}
+document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var v=b.dataset.copy;
+function ok(){toast("Copied: "+v)}
+try{navigator.clipboard.writeText(v).then(ok,function(){fb(v);ok()})}catch(e){fb(v);ok()}})});
+function fb(v){var a=document.createElement("textarea");a.value=v;document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(e){}a.remove()}
+// slide-in on scroll
+var rv=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.18});rv.forEach(function(e){io.observe(e)})}else{rv.forEach(function(e){e.classList.add("in")})}
+// nav highlight + progress bar
+var links=document.querySelectorAll(".nv nav a");
+if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{threshold:.5});document.querySelectorAll("section").forEach(function(s){so.observe(s)})}
+addEventListener("scroll",function(){var m=document.documentElement.scrollHeight-innerHeight;document.getElementById("pg").style.transform="scaleX("+(m>0?scrollY/m:0)+")"},{passive:true});
+// pixel neighbourhood (200+ tiny houses)
+(function(){var S={A:[14,10,"M3 0h8v1H3zM2 1h10v1H2zM1 2h12v1H1zM0 3h14v1H0z","M1 4h12v6H1z","M2 5h2v2H2zM10 5h2v2h-2z","M6 7h2v3H6z"],
+B:[12,14,"M2 0h8v1H2zM1 1h10v1H1zM0 2h12v1H0z","M1 3h10v11H1z","M2 4h2v2H2zM8 4h2v2H8zM2 8h2v2H2zM8 8h2v2H8z","M5 11h2v3H5z"],
+C:[14,9,"M0 0h14v1H0z","M1 1h12v8H1z","M2 3h6v3H2z","M10 5h2v4h-2z"]};
+var a=7;function R(){a|=0;a=a+1831565813|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}
+var pal=["#F5EFE6","#9DB4D4","#E8B98F","#8CCBB5","#C4B1E8","#FFD36B","#FF8FB1","#7C8AA5"],d="",g="",VW=1056,VH=380;
+for(var k in S){var s=S[k];d+='<symbol id="h'+k+'" viewBox="0 0 '+s[0]+" "+s[1]+'"><path d="'+s[2]+'" fill="#5B6075"/><path d="'+s[3]+'" fill="currentColor"/><path d="'+s[4]+'" fill="#FFD36B"/><path d="'+s[5]+'" fill="#1A1630"/></symbol>'}
+var sc=[1,1.15,1.3,1.45,1.6,1.8,2,2.2,2.4,2.6];
+sc.forEach(function(s,i){var b=110+i*28,x=-Math.floor(R()*20);g+='<g opacity="'+(.3+.7*i/9).toFixed(2)+'"><rect y="'+b+'" width="'+VW+'" height="'+(VH-b)+'" fill="#120E26"/>';
+while(x<VW){var k="AABBC".charAt(Math.floor(R()*5)),q=S[k],w=q[0]*2*s,h=q[1]*2*s;g+='<use href="#h'+k+'" x="'+x.toFixed(1)+'" y="'+(b-h).toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" style="color:'+pal[Math.floor(R()*pal.length)]+'"/>';x+=w+2+Math.floor(R()*6)}g+="</g>"});
+document.getElementById("city").innerHTML='<svg viewBox="0 0 '+VW+" "+VH+'" shape-rendering="crispEdges" aria-hidden="true"><defs>'+d+"</defs>"+g+"</svg>"})();
+</script>
+</body>
+</html>
+
 
